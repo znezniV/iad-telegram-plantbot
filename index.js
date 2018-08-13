@@ -1,4 +1,5 @@
 // load node module
+const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
 
 // load token
@@ -8,7 +9,7 @@ const loadedToken = require('./token');
 const token = loadedToken.telegramToken;
 
 // add plants
-const plantData = require('./plants_config');
+const plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
 
 // create new bot
 const bot = new TelegramBot(token, { polling: true });

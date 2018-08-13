@@ -7,6 +7,9 @@ const loadedToken = require('./token');
 // assign token
 const token = loadedToken.telegramToken;
 
+// add plants
+const plantData = require('./plants_config');
+
 // create new bot
 const bot = new TelegramBot(token, { polling: true });
 

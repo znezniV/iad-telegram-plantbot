@@ -12,6 +12,9 @@ const token = loadedToken.telegramToken;
 // add plants
 const plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
 
+// watching variables
+let isWatching = false;
+const watchFreq = moment.duration({ 'minutes': 30 });
 // create new bot
 const bot = new TelegramBot(token, { polling: true });
 

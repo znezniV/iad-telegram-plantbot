@@ -44,12 +44,25 @@ bot.on('message', (msg) => {
 
 bot.onText(/\/start/, (msg) => {
 
-    bot.sendMessage(msg.chat.id, "Hi plant lover " + msg.from.first_name, {
+    let plants = plantData.features;
+
+    let keyboard = {
         "reply_markup": {
-            "keyboard": [["Sample text", "Second sample"], ["Keyboard"], ["I'm robot"]]
+            "keyboard": [
+                ["/status"],
+                ["/watered_all"]
+            ]
         }
+    }
+
+    // add plants to keyboard
+    plants.forEach(value => {
+
+        keyboard.reply_markup.keyboard.push([value.name]);
+
     });
 
+    bot.sendMessage(msg.chat.id, "Hi plant lover " + msg.from.first_name, keyboard);
 
 });
 function emjoiCodeToString(emoji) {

@@ -98,6 +98,10 @@ function updateWaterDate(plant, time) {
     plant.lastWatered = time;
 }
 
+function waterPlant(plant) {
+    updateWaterDate(plant, moment().unix());
+    plant.fine = true;
+}
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }

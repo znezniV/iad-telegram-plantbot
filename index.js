@@ -65,6 +65,18 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, "Hi plant lover " + msg.from.first_name, keyboard);
 
 });
+
+bot.onText(/\/watch/, (msg) => {
+
+    isWatching = true;
+
+    // TODO: function that takes isWatching as parameter and recurse only if true 
+});
+
+bot.onText(/\/unwatch/, (msg) => {
+    isWatching = false;
+});
+
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }

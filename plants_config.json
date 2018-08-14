@@ -9,7 +9,7 @@
         {
             "name": "Plant 2",
             "daysWaterFreq": 7,
-            "fine": true,
+            "fine": false,
             "lastWatered": 1534197255199
         },
         {

@@ -93,6 +93,11 @@ bot.onText(/\/status/, (msg) => {
     bot.sendMessage(msg.chat.id, "*Status check:* \n" + status, { parse_mode: "markdown" });
 
 });
+
+function updateWaterDate(plant, time) {
+    plant.lastWatered = time;
+}
+
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }

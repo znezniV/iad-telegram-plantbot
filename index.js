@@ -15,6 +15,12 @@ const plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
 // watching variables
 let isWatching = false;
 const watchFreq = moment.duration({ 'minutes': 30 });
+
+// set emojis
+const emoji_Success = emjoiCodeToString('2705');
+const emoji_Danger = emjoiCodeToString('274C');
+const emoji_Water = emjoiCodeToString('1F4A6');
+
 // create new bot
 const bot = new TelegramBot(token, { polling: true });
 
@@ -42,3 +48,6 @@ bot.onText(/\/start/, (msg) => {
     });
 
 });
+function emjoiCodeToString(emoji) {
+    return (String.fromCharCode(parseInt(emoji, 16)));
+}

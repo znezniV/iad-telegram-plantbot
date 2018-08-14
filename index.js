@@ -125,3 +125,7 @@ function plantlantState(plants, watching, chatId, delay) {
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }
+
+function updatePlantFile() {
+
+}

@@ -29,14 +29,17 @@ bot.on('message', (msg) => {
 
     var hi = "hi";
     if (msg.text.toString().toLowerCase().indexOf(hi) === 0) {
+
         bot.sendMessage(msg.chat.id, "Hello dear user");
+
     }
 
     var bye = "bye";
     if (msg.text.toString().toLowerCase().includes(bye)) {
-        bot.sendMessage(msg.chat.id, "Hope to see you around again , Bye");
-    }
 
+        bot.sendMessage(msg.chat.id, "Hope to see you around again , Bye");
+
+    }
 });
 
 bot.onText(/\/start/, (msg) => {
@@ -46,6 +49,7 @@ bot.onText(/\/start/, (msg) => {
             "keyboard": [["Sample text", "Second sample"], ["Keyboard"], ["I'm robot"]]
         }
     });
+
 
 });
 function emjoiCodeToString(emoji) {

@@ -102,6 +102,26 @@ function waterPlant(plant) {
     updateWaterDate(plant, moment().unix());
     plant.fine = true;
 }
+
+function plantlantState(plants, watching, chatId, delay) {
+
+    plants.forEach(plant => {
+
+        let freq = moment.duration({ 'days': plant.daysWaterFreq });
+        let now = moment();
+        let timeNotWatered = plant.lastWatered - now;
+
+        if (timeNotWatered >= freq && plant.fine) {
+            plant.fine = false;
+        }
+    });
+
+    // recurse function if watching is still on
+    if (watching) {
+        plantlantState(plants, isWatching, chatId);
+    }
+}
+
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }

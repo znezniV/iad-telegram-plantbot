@@ -77,6 +77,22 @@ bot.onText(/\/unwatch/, (msg) => {
     isWatching = false;
 });
 
+bot.onText(/\/status/, (msg) => {
+
+    let plants = plantData.features;
+    let status = "";
+
+    plants.forEach(value => {
+
+        let diff = moment(value.lastWatered).fromNow();
+
+        status += value.name + ": Watered " + diff + " " + (value.fine ? emoji_Success : emoji_Danger) + "\n";
+
+    });
+
+    bot.sendMessage(msg.chat.id, "*Status check:* \n" + status, { parse_mode: "markdown" });
+
+});
 function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }

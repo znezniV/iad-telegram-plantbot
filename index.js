@@ -73,8 +73,10 @@ bot.onText(/\/start/, (msg) => {
 
 });
 
-bot.onText(/\/unwatch/, (msg) => {
-    isWatching = false;
+bot.onText(/\/stop/, (msg) => {
+
+    // stop running checking plants constantly
+    clearInterval(interval);
 });
 
 bot.onText(/\/status/, (msg) => {

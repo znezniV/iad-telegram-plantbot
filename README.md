@@ -4,24 +4,24 @@ A telegram bot to remind students in the Interaction Design atelier to water the
 ## Installation
 1. Clone repo.
 ```clone
-git clone https://github.com/znezniV/iad-telegram-plantbot.git
+$ git clone https://github.com/znezniV/iad-telegram-plantbot.git
 ```
 
 2. Install npm packages
 ```npm
-cd iad-telegram-plantbot
-npm install
+$ cd iad-telegram-plantbot
+$ npm install
 ```
 
 3. Install Nodemon globally
 ```nodemon
-npm install nodemon -g
+$ npm install nodemon -g
 ```
 
 ## Usage
 1. Run script
 ```npm command
-npm start
+$ npm start
 // (starts "nodemon index.js --ignore '*.json'")
 ```
 

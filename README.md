@@ -23,15 +23,16 @@ $ npm install nodemon -g
 You can get the token from the Telegram BotFather which needs to be included in the `token` variable in `index.js`.
 
 ## Usage
+### API
 1. Run script
 ```npm command
 $ npm start
 // (starts "nodemon index.js --ignore '*.json'")
 ```
+### Telegram
+1. Add bot
 
-1. Add bot on **Telegram**
-
-2. Commands on **Telegram**
+2. Commands
 - `/start` To start the bot.
 - `/stop` To stop watching the plants.
 - `/status` To get the status of all plants.

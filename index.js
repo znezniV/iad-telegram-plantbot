@@ -27,9 +27,16 @@ const bot = new TelegramBot(token, { polling: true });
 // any message
 bot.on('message', (msg) => {
 
+    let plants = plantData.features;
 
     // check match with plant name and update water state
+    plants.forEach(plant => {
+        if (msg.text.toString() === plant.name) {
 
+            waterPlant(plant);
+            bot.sendMessage(msg.chat.id, msg.from.first_name + " watered " + plant.name + ".")
+        }
+    });
 });
 
 // start message

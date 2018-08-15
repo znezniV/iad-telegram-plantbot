@@ -90,7 +90,7 @@ bot.onText(/\/status/, (msg) => {
 
         let diff = moment(value.lastWatered).fromNow();
 
-        status += value.name + ": Watered " + diff + " " + (value.fine ? emoji_Success : emoji_Danger) + "\n";
+        status += "*" + value.name + "*: " + (value.fine ? emoji_Success : emoji_Danger) + " Watered " + diff + "\n";
 
     });
 

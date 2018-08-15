@@ -25,9 +25,9 @@ npm start
 // (starts "nodemon index.js --ignore '*.json'")
 ```
 
-1. Add bot on *Telegram*
+1. Add bot on **Telegram**
 
-2. Commands bot on *Telegram*
+2. Commands bot on **Telegram**
 `/start` To start the bot.
 `/stop` To stop watching the plants.
 `/status` To get the status of all plants.

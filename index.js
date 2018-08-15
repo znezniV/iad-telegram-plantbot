@@ -105,7 +105,9 @@ function waterPlant(plant) {
     plant.fine = true;
 }
 
-function plantlantState(plants, watching, chatId, delay) {
+function plantState(chatId) {
+
+    let plants = plantData.features;
 
     plants.forEach(plant => {
 
@@ -114,14 +116,9 @@ function plantlantState(plants, watching, chatId, delay) {
         let timeNotWatered = plant.lastWatered - now;
 
         if (timeNotWatered >= freq && plant.fine) {
-            plant.fine = false;
+            bot.sendMessage(chatId, plant.name + " needs water.", { parse_mode: "markdown" });
         }
     });
-
-    // recurse function if watching is still on
-    if (watching) {
-        plantlantState(plants, isWatching, chatId);
-    }
 }
 
 function emjoiCodeToString(emoji) {

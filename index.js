@@ -10,7 +10,7 @@ const loadedToken = require('./token'); // token from telegram BotFather (in ign
 const token = loadedToken.telegramToken;
 
 // add plants
-const plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
+let plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
 
 // watching variables
 let interval;

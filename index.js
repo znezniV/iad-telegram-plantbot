@@ -28,6 +28,7 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on('message', (msg) => {
 
 
+    // check match with plant name and update water state
 
 });
 

@@ -105,9 +105,8 @@ function updateWaterDate(plant, time) {
 function waterPlant(plant) {
     updateWaterDate(plant, moment.now());
 
-    // BUG: No idea why this function restarts it's the parent and grand-parent function.
-    // updatePlantFile(plantData);
-    
+    updatePlantFile(plantData);
+
     plant.fine = true;
 }
 
@@ -137,11 +136,11 @@ function emjoiCodeToString(emoji) {
 function updatePlantFile(data) {
     let newFile = JSON.stringify(data);
     fs.writeFile('./plants_config.json', newFile, 'utf8', function (err) {
-        
+
         if (err) {
             return console.log(err);
         }
 
-        console.log("The file was saved!");
+        console.log(moment() + " The file was saved!");
     });
 }

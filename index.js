@@ -104,6 +104,10 @@ function updateWaterDate(plant, time) {
 
 function waterPlant(plant) {
     updateWaterDate(plant, moment.now());
+
+    // BUG: No idea why this function restarts it's the parent and grand-parent function.
+    // updatePlantFile(plantData);
+    
     plant.fine = true;
 }
 

@@ -136,7 +136,7 @@ function emjoiCodeToString(emoji) {
 
 function updatePlantFile(data) {
     let newFile = JSON.stringify(data);
-    fs.writeFile('./plants_config__99999.json', newFile, 'utf8', function (err) {
+    fs.writeFile('./plants_config.json', newFile, 'utf8', function (err) {
         
         if (err) {
             return console.log(err);

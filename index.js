@@ -130,6 +130,14 @@ function emjoiCodeToString(emoji) {
     return (String.fromCharCode(parseInt(emoji, 16)));
 }
 
-function updatePlantFile() {
+function updatePlantFile(data) {
+    let newFile = JSON.stringify(data);
+    fs.writeFile('./plants_config__99999.json', newFile, 'utf8', function (err) {
+        
+        if (err) {
+            return console.log(err);
+        }
 
+        console.log("The file was saved!");
+    });
 }

@@ -124,6 +124,8 @@ function plantState(chatId) {
         let timeNotWatered = plant.lastWatered - now;
 
         if (timeNotWatered >= freq && plant.fine) {
+            plant.fine = false;
+            updatePlantFile(plantData);
             bot.sendMessage(chatId, plant.name + " needs water.", { parse_mode: "markdown" });
         }
     });

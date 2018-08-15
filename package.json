@@ -4,7 +4,8 @@
   "description": "A telegram bot to remind students in the Interaction Design atelier to water the plants",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ignore '*.json'"
   },
   "repository": {
     "type": "git",

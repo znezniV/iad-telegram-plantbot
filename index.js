@@ -103,7 +103,7 @@ function updateWaterDate(plant, time) {
 }
 
 function waterPlant(plant) {
-    updateWaterDate(plant, moment().unix());
+    updateWaterDate(plant, moment.now());
     plant.fine = true;
 }
 
@@ -116,7 +116,8 @@ function plantState(chatId) {
 
         // check if reminder is needed and generate message
         let freq = moment.duration({ 'days': plant.daysWaterFreq });
-        let now = moment();
+        let now = moment().now();
+
         let timeNotWatered = plant.lastWatered - now;
 
         if (timeNotWatered >= freq && plant.fine) {

@@ -13,8 +13,8 @@ const token = loadedToken.telegramToken;
 const plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));
 
 // watching variables
-const watchFreq = moment.duration({ 'minutes': 30 });
 let interval;
+const watchFreq = moment.duration({ 'seconds': 10 });
 
 // set emojis
 const emoji_Success = emjoiCodeToString('2705');

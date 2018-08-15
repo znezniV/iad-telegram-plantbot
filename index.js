@@ -4,7 +4,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const moment = require('moment');
 
 // load token
-const loadedToken = require('./token');
+const loadedToken = require('./token'); // token from telegram BotFather (in ignored seperate file)
 
 // assign token
 const token = loadedToken.telegramToken;
@@ -24,7 +24,7 @@ const emoji_Water = emjoiCodeToString('1F4A6');
 // create new bot
 const bot = new TelegramBot(token, { polling: true });
 
-// test
+// any message
 bot.on('message', (msg) => {
 
     var hi = "hi";
@@ -42,10 +42,12 @@ bot.on('message', (msg) => {
     }
 });
 
+// start message
 bot.onText(/\/start/, (msg) => {
 
     let plants = plantData.features;
 
+    // init keyboard
     let keyboard = {
         "reply_markup": {
             "keyboard": [
@@ -64,26 +66,29 @@ bot.onText(/\/start/, (msg) => {
 
     // set interval of checking plants
     interval = setInterval(chatId => {
-        
+
         plantState(chatId);
 
     }, watchFreq, msg.chat.id);
 
+    // send keyboard shortcuts
     bot.sendMessage(msg.chat.id, "Hi plant lover " + msg.from.first_name, keyboard);
 
 });
 
+// stop running checking plants constantly
 bot.onText(/\/stop/, (msg) => {
 
-    // stop running checking plants constantly
     clearInterval(interval);
 });
 
+// request status of all plants
 bot.onText(/\/status/, (msg) => {
 
     let plants = plantData.features;
     let status = "";
 
+    // generate text for status request
     plants.forEach(value => {
 
         let diff = moment(value.lastWatered).fromNow();
@@ -105,12 +110,14 @@ function waterPlant(plant) {
     plant.fine = true;
 }
 
+// check state of plants
 function plantState(chatId) {
 
     let plants = plantData.features;
 
     plants.forEach(plant => {
 
+        // check if reminder is needed and generate message
         let freq = moment.duration({ 'days': plant.daysWaterFreq });
         let now = moment();
         let timeNotWatered = plant.lastWatered - now;

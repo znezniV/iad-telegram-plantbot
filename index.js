@@ -62,15 +62,15 @@ bot.onText(/\/start/, (msg) => {
 
     });
 
+    // set interval of checking plants
+    interval = setInterval(chatId => {
+        
+        plantState(chatId);
+
+    }, watchFreq, msg.chat.id);
+
     bot.sendMessage(msg.chat.id, "Hi plant lover " + msg.from.first_name, keyboard);
 
-});
-
-bot.onText(/\/watch/, (msg) => {
-
-    isWatching = true;
-
-    // TODO: function that takes isWatching as parameter and recurse only if true 
 });
 
 bot.onText(/\/unwatch/, (msg) => {

@@ -143,6 +143,6 @@ function updatePlantFile(data) {
             return console.log(err);
         }
 
-        console.log(moment() + " The file was saved!");
+        console.log(moment().format() + " The file was saved!");
     });
 }

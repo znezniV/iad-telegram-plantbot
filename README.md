@@ -28,10 +28,10 @@ npm start
 1. Add bot on **Telegram**
 
 2. Commands bot on **Telegram**
-`/start` To start the bot.
-`/stop` To stop watching the plants.
-`/status` To get the status of all plants.
-`<PlantName>` To set Plant as watered.
+- `/start` To start the bot.
+- `/stop` To stop watching the plants.
+- `/status` To get the status of all plants.
+- `<PlantName>` To set Plant as watered.
 
 3. Configure
 To configures for the plants have to be be done manually in `plants_config.json` for now.

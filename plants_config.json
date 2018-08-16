@@ -1,28 +1,28 @@
-{ 
+{
     "features": [
         {
             "name": "Plant 1",
-            "daysWaterFreq": 7,
+            "daysWaterFreq": 2,
             "fine": true,
-            "lastWatered": 1534197255199
+            "lastWatered": 1534352676184
         },
         {
             "name": "Plant 2",
-            "daysWaterFreq": 7,
-            "fine": false,
-            "lastWatered": 1534197255199
+            "daysWaterFreq": 3,
+            "fine": true,
+            "lastWatered": 1534341282402
         },
         {
             "name": "Plant 3",
-            "daysWaterFreq": 7,
+            "daysWaterFreq": 4,
             "fine": true,
-            "lastWatered": 1534197255199
+            "lastWatered": 1534341200582
         },
         {
             "name": "Plant 4",
-            "daysWaterFreq": 7,
+            "daysWaterFreq": 5,
             "fine": true,
-            "lastWatered": 1534197255199
+            "lastWatered": 1534341200582
         }
     ]
 }

@@ -23,7 +23,7 @@ $ npm install nodemon -g
 You can get the token from the Telegram BotFather which needs to be included in the `token` variable in `index.js`.
 
 ## Usage
-### API
+### API (Node)
 1. Run script
 ```npm command
 $ npm start

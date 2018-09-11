@@ -7,7 +7,7 @@ const moment = require('moment');
 const loadedToken = require('./token'); // token from telegram BotFather (in ignored seperate file)
 
 // assign token
-const token = loadedToken.telegramToken;
+const token = process.env.TELEGRAM_BOT_TOKEN;
 
 // add plants
 let plantData = JSON.parse(fs.readFileSync('plants_config.json', 'utf8'));

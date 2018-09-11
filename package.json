@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "local": "nodemon index.js --ignore '*.json'",
-    "server": "node index.js"
+    "server": "node index.j" 
   },
   "repository": {
     "type": "git",

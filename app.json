@@ -1,0 +1,8 @@
+{
+  "name": "IAD Plantbot",
+  "description": "A telegram bot to remind students in the Interaction Design atelier to water the plants",
+  "repository": "https://github.com/znezniV/iad-telegram-plantbot",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

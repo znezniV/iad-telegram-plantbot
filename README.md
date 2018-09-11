@@ -1,5 +1,6 @@
 # IAD Telegram Plant Bot
-A telegram bot to remind students in the Interaction Design atelier to water the plants 
+A telegram bot to remind students in the Interaction Design atelier to water the plants.
+The bot is powered by [Node.js Telegram Bot API](https://github.com/yagop/node-telegram-bot-api).
 
 ## Installation
 1. Clone repo.

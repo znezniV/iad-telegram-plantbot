@@ -3,9 +3,6 @@ const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
 const moment = require('moment');
 
-// load token
-const loadedToken = require('./token'); // token from telegram BotFather (in ignored seperate file)
-
 // assign token
 const token = process.env.TELEGRAM_BOT_TOKEN;
 

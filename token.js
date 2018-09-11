@@ -1,1 +1,0 @@
-module.exports = { telegramToken: '601765198:AAEa7kSmo83g_qWUWYWpqVguWIkrkJx3PIU' };

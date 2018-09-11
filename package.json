@@ -20,7 +20,8 @@
   "homepage": "https://github.com/znezniV/iad-telegram-plantbot#readme",
   "dependencies": {
     "moment": "^2.22.2",
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "nodemon": "1.18.4"
   },
   "devDependencies": {}
 }
